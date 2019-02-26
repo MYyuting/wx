@@ -1,0 +1,8 @@
+<!--pages/public/consultDetails/consultDetails.wxml-->
+<view class='consult'>
+    <view class='con-til'>{{consultDetails.informationTitle}}</view>
+    <image src='{{consultDetails.informationPicUrl}}'></image>
+    <view>
+        <rich-text>{{consultDetails.informationText}}</rich-text>
+    </view>
+</view>

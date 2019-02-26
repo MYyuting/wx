@@ -1,0 +1,54 @@
+<!--pages/public/datum1/datum1.wxml-->
+<!-- 个人资料展示 -->
+<view class='datum'>
+    <view class='head-top back'></view>
+    <view class='head-box'>
+        <view class='head-img' style='background-image:url({{dataMsg.userAvatar}})' bindtap='pathImg'>
+            <image wx:if="{{dataMsg.userType == 2}}" src='/images/vl.png'></image>
+            <image wx:elif="{{dataMsg.userType == 1}}" src='/images/rl.png'></image>
+            <image wx:else src='/images/pl.png'></image>
+        </view>
+        <view class='head-til'>{{dataMsg.userName}}</view>
+        <view class='autxt'>{{dataMsg.userType == 0 ?'未认证' :'已认证'}}</view>
+        <!-- <view class='tab'>导演/编剧/制片</view> -->
+        <view class='company'>美星影视文化有限公司</view>
+    </view>
+
+    <view class='fill-list'>
+        <view class='authen'>
+            <image src='/images/rne.png' style='width:53rpx;height:38rpx;'></image>
+            <view>
+                <text style='color:#FF0000;font-size:24rpx;'>
+                {{dataMsg.userType == 0 ?'未认证' :'已认证'}}</text>
+                <image src='/images/left.png' style='width:12rpx;height:22rpx;margin-left:15rpx;'></image>
+            </view>
+        </view>
+
+        <view class='authen-con'>
+            <view>
+                <text>熟悉领域</text>
+                <view>{{dataMsg.domain}}</view>
+            </view>
+            <view>
+                <text>期待认识</text>
+                <view>{{dataMsg.hope}}</view>
+            </view>
+            <view>
+                <text>兴趣爱好</text>
+                <view>{{dataMsg.hobby}}</view>
+            </view>
+            <view>
+                <text>来往城市</text>
+                <view>{{dataMsg.city}}</view>
+            </view>
+            <view>
+                <text>毕业院校</text>
+                <view>{{dataMsg.graduated}}</view>
+            </view>
+            <view>
+                <text>我的家乡</text>
+                <view>{{dataMsg.homeTown}}</view>
+            </view>
+        </view>
+    </view>
+</view>

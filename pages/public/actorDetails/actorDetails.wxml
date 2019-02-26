@@ -1,0 +1,153 @@
+<!--pages/public/actorDetails/actorDetails.wxml-->
+<view class='actor-details'>
+    <swiper class='banner1' indicator-dots="true" autoplay="true" indicator-color="#fff" indicator-active-color="#1B32FE" circular='true'>
+        <block wx:for="{{banner}}" wx:key="index">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class='Notice'>
+        <view class='notice-img'>
+            <image class='txt' src='/images/txt.png'></image>
+            <image class='horn' src='/images/horn.png'></image>
+        </view>
+        <swiper autoplay="true" vertical="true" circular="true">
+            <block wx:for="{{dynamicsList}}" wx:key="index">
+                <swiper-item>
+                    <view class='swiper-txt'>{{item.dynamicsTitle}}</view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 个人简介 -->
+    <view>
+        <com-til>
+            <view class="details-til">
+                <image src='/images/ju.png'></image>个人简介
+            </view>
+        </com-til>
+        <view class='info-list margin'>
+            <view>
+                <view>姓名</view> {{introduce.actorName}}
+            </view>
+            <view>
+                <view>国籍</view> {{introduce.actorNationality}}
+            </view>
+            <view>
+                <view>民族</view> {{introduce.actorNational}}
+            </view>
+            <view>
+                <view>性别</view> {{introduce.actorSex == 1 ? '男' : '女'}}
+            </view>
+            <view>
+                <view>职业</view>  {{introduce.actorWork}}
+            </view>
+            <view>
+                <view>出生年与</view> {{introduce.actorBirthday}}
+            </view>
+            <view>
+                <view>毕业学校</view> {{introduce.actorSchool}}
+            </view>
+        </view>
+    </view>
+
+    <!-- 主要成就 -->
+    <view>
+        <com-til>
+            <view class="details-til">
+                <image src='/images/ju.png'></image>主要成就
+            </view>
+        </com-til>
+        <view class='achievement margin'>
+            <rich-text>
+            {{introduce.actorAchievement}}
+            </rich-text>
+        </view>
+    </view>
+    <!-- 主要参演 -->
+    <view>
+        <com-til>
+            <view class="details-til">
+                <image src='/images/ju.png'></image>主要作品
+            </view>
+        </com-til>
+        <view class='works-list margin'>
+            <view wx:for="{{productionList}}" wx:key="index">
+                <view class='works-img'>
+                    <image mode='aspectFill' src='{{item.productionUrl}}'></image>
+                </view>
+                <view class='works-txt'>
+                    <view style='color:#000'>{{item.productionName}}</view>
+                    <rich-text>
+                        {{item.productionAttribute}}
+                    </rich-text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <!-- 动态展示 -->
+    <view>
+        <com-til>
+            <view class="details-til">
+                <image src='/images/ju.png'></image>动态展示
+            </view>
+        </com-til>
+        <view class='dynamic margin'>
+            <view class='list' wx:for='{{dynamicsList}}' wx:key='index'>
+                <image mode='aspectFill' src='{{item.dynamicsPicUrl}}'></image>
+            </view>
+            <!-- <view class='list'>
+                <image src='/images/'></image>
+            </view>
+            <view class='list'>
+                <image src='/images/'></image>
+            </view> -->
+        </view>
+    </view>
+
+    <!-- 粉丝留言 -->
+    <view>
+        <com-til>
+            <view class="details-til">
+                <image src='/images/ju.png'></image>粉丝留言
+            </view>
+        </com-til>
+        <view class='message margin'>
+            <view class='msg-list' wx:for='{{comentList}}' wx:key='index'>
+                <view class='msg-box'>
+                    <view class='msg-left'>
+                        <image src='{{item.commentUserUrl}}'></image>
+                    </view>
+                    <view class='msg-right'>
+                        <view class='msg-top'>
+                            <text>{{item.commentName}}</text>
+                            <text style='color:#8D8D8D'>43分钟前</text>
+                        </view>
+                        <view bindtap='inputFocus'>{{item.commentContent}}</view>
+                    </view>
+                </view>
+                <!-- <view class='msg-com'>
+                    <view class=''>
+                        <text style='color:#1B32FE'>胖虎大川：</text>我心目中的女神就是这样的
+                    </view>
+                    <view>
+                        <text style='color:#1B32FE'>胖虎大川：</text>我心目中的女神就是这样的
+                    </view>
+                </view> -->
+            </view>
+        </view>
+    </view>
+    <view class='input'>
+        <input placeholder='请输入你的评论' focus="{{focusShow}}" bindinput='comentTxt'></input>
+        <view bindtap='addcoment'>发送</view>
+    </view>
+
+    <!-- 关注 -->
+    <view class='postion'>
+        <image  bindtap='hornClick' src='{{hornShow}}'></image>
+    </view>
+</view>

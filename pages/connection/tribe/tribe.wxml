@@ -1,0 +1,9 @@
+<!--pages/connection/tribe/tribe.wxml-->
+<view class='tribe'>
+    <view class='tribe-list' wx:for="{{groupList}}" wx:key="" bindtap='into_room' data-username="{{ item.name }}" data-roomid="{{ item.roomId }}">
+        <view>
+            <image src='/images/qun.png'></image>
+        </view>
+        <view>{{item.name}}</view>
+    </view>
+</view>

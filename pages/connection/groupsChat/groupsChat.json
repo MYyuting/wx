@@ -1,0 +1,7 @@
+{
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "chatting",
+    "usingComponents": {
+        "chat": "../../../compents/chat/chat"
+    }
+}

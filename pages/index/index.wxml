@@ -1,0 +1,90 @@
+<!--index.wxml-->
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='index' style='margin-top:{{height}}px'>
+    <view style='padding: 10rpx 15rpx 20rpx'>
+        <view class='sos' bindtap='sosClick'>
+            <image src='/images/sos.png'></image>
+            <text>输入艺人名字/想结识的人</text>
+        </view>
+    </view>
+
+    <!-- banner -->
+    <view class='bottom-border banner-box'>
+        <swiper class='banner-img' circular="true" autoplay="{{false}}" previous-margin="22px" next-margin="22px" bindchange='swiperChange'>
+            <block wx:for="{{banner}}" wx:key="index">
+                <swiper-item>
+                    <image mode='aspectFill' src="{{item.bannerUrl}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" bindchange="chuangEvent"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 艺人 明星 -->
+    <view class='bottom-border'>
+        <view>
+            <com-til>
+                <view class="actor-title">
+                    <image src='/images/ju.png'></image>艺人展示
+                </view>
+                <view class='more' bindtap='moreClick' data-more="艺人">更多
+                    <image src='/images/left.png'></image>
+                </view>
+            </com-til>
+            <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+                <view class="scroll-view-item_H actor-list" wx:for="{{actorList}}" wx:key="index" style="background-image:url('{{item.actorHeadUrl}}')" bindtap='actorClick' data-actorId="{{item.actorId}}">
+                    <view>
+                        <view class='actor-til'>#{{item.actorName}}#</view>
+                        <view class='actor-num'>
+                            <text>{{item.actorTitle}}</text>
+                            <text>{{item.actorConcern}}</text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <!-- 商品 -->
+        <!-- <view>
+            <com-til>
+                <view class="actor-title">
+                    <image src='/images/ju.png'></image>商品展示</view>
+                <view class='more' bindtap='moreClick' data-more="明星">更多
+                    <image src='/images/left.png'></image>
+                </view>
+            </com-til>
+            <scroll-view class="scroll-view_H buy-list" scroll-x>
+                <view class="scroll-view-item_Y" wx:for="{{3}}" wx:key="index">
+                    <view class='Image'>
+                        <image src='/images/buy1.png'></image>
+                    </view>
+                    <view class='til-y'>曲昱瞳限量签名抱枕sdsfdsfs</view>
+                    <view class='buy'>
+                        <view>60金币</view>
+                        <view class='buybtn' bindtap='starClick'>购买</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view> -->
+    </view>
+    <!-- 咨询list -->
+    <view>
+        <com-til>
+            <view class="actor-title">
+                <image src='/images/ju.png'></image>美星热门咨询
+            </view>
+        </com-til>
+        <view class='consult' wx:for="{{consult}}" wx:key="index" data-infoId="{{item.informationId}}" bindtap='consulsClick'>
+            <view class='consult-left'>
+                <view class='consult-til'>
+                    22222222
+                    <!-- {{item.informationTitle}} -->
+                </view>
+                <text>{{item.informationType}}</text>
+            </view>
+            <view class='consult-right'>
+                <image src='{{item.informationPicUrl}}' mode='aspectFill'></image>
+            </view>
+        </view>
+    </view>
+
+</view>

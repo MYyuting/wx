@@ -1,0 +1,169 @@
+/* pages/public/actorDetails/actorDetails.wxss */
+.banner1{
+    height: 400rpx;
+}
+.slide-image{
+    width: 100%;
+    height: 400rpx;
+}
+.Notice{
+    padding: 20rpx 30rpx;
+}
+.Notice swiper{
+    width: 50%;
+    flex-grow: 1;
+    height: 40rpx;
+}
+.notice-img .txt{
+    width: 127rpx;
+    height: 29rpx;
+}
+.notice-img image{
+    margin-right:20rpx; 
+}
+.notice-img .horn{
+    width: 36rpx;
+    height: 32rpx;
+}
+.swiper-txt{
+    line-height: 40rpx;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #FF0000;
+}
+.details-til,.notice-img,.Notice,.msg-box,.msg-top{
+    display: flex;
+    align-items: center;
+}
+.details-til image{
+    width: 18rpx;
+    height: 26rpx;
+    margin-right: 10rpx;
+}
+.margin{
+    padding: 10rpx 15rpx;
+}
+.info-list>view{
+    display: flex;
+    padding: 7rpx 0;
+    color: #494949;
+}
+.info-list>view>view{
+    width: 200rpx;
+}
+
+/* 主要参演 */
+.achievement{
+    color: #494949;
+}
+.works-list,.works-list>view{
+    display: flex;
+    flex-wrap: wrap;
+}
+.works-list>view{
+    width: 49%;
+    margin-bottom: 20rpx;
+    /* border: 1px solid #ccc; */
+}
+.works-img,.works-img image{
+    width: 142rpx;
+    height: 198rpx;
+    /* border: 1px solid #ccc; */
+}
+.works-img{
+    margin-right: 15rpx;
+}
+.works-txt view{
+    color: #999;
+    font-size: 26rpx;
+    margin-top: 6rpx;
+}
+
+/* 主要成就 */
+.dynamic{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.dynamic .list{
+    width: 390rpx;
+    height: 240rpx;
+    border: 1px solid rgb(204, 204, 204);
+    margin-bottom: 15rpx;
+}
+.dynamic image{
+    width: 100%;
+    height: 100%;
+}
+.list:nth-child(3){
+    width: 310rpx;
+    height: 500rpx;
+    position: absolute;
+    right: 15rpx;
+    top: 10rpx;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+/* .dynamic .right{
+    width: 310rpx;
+    height: 500rpx;
+} */
+
+.postion{
+    position: fixed;
+    right: 10rpx;
+    top: 40%;
+}
+.postion image{
+    width: 95rpx;
+    height: 270rpx;
+}
+
+/* 粉丝 */
+.msg-list{
+    margin-bottom: 20rpx;
+}
+.msg-left image{
+    width: 93rpx;
+    height: 93rpx;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.msg-right{
+    width: 50%;
+    flex-grow:1;
+    margin-left: 30rpx;
+}
+.msg-top{
+    justify-content: space-between;
+    font-size: 26rpx;
+    margin-bottom: 5rpx;
+}
+.msg-com{
+    margin-left: 100rpx;
+    background: #E3E3E3;
+    padding: 15rpx;
+    font-size: 22rpx;
+}
+.msg-com view{
+    padding-bottom:10rpx; 
+}
+.input{
+    padding: 0 20rpx;
+    display: flex;
+}
+.input input{
+    margin: 20rpx 0;
+    border-radius:10rpx; 
+    height: 70rpx;
+    width: 60%;
+    flex-grow: 1;
+    background: #eee;
+}
+.input view{
+    line-height: 70rpx;
+    padding: 0 25rpx;
+    margin: 20rpx 0;
+}

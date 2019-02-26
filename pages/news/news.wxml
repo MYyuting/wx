@@ -1,0 +1,36 @@
+<!--pages/news/news.wxml-->
+<!-- 消息 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='newsView' style='margin-top:{{height}}px'>
+    <!-- 搜索 -->
+    <view style='padding: 10rpx 15rpx 20rpx'>
+        <view class='sos'>
+            <image src='/images/sos.png'></image>
+            <text>请输入您要查找消息的内容</text>
+        </view>
+    </view>
+
+    <view class='news-con'>
+        <view class='news-til'>最新消息</view>
+        <view>
+            <view class='news-list' wx:for="{{arr}}" wx:key="{{index}}" bindtap="into_chatRoom" data-username="{{ item.username }}">
+                <view class='news-list-left' style='background-image:url({{item.ext.imgUrl}})' catchtap='datum'>
+                    <view wx:if="{{ item.unReadCount > 0 || item.unReadCount == '...' }}">
+                        {{ item.unReadCount }}
+                    </view>
+                    <image src='/images/vl.png'></image>
+                </view>
+                <view class='news-list-right'>
+                    <view class='news-r-top'>
+                        <view>{{item.username}}</view>
+                        <text>{{item.time}}</text>
+                    </view>
+                    <view class='news-r-bottom'>
+                        {{item.msg.data[0].data}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

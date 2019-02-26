@@ -1,0 +1,17 @@
+/* pages/personal/setting/setting.wxss */
+.setting>view{
+    padding: 10rpx 30rpx;
+}
+.setting .title{
+    display: flex;
+    border-bottom:1px solid #ccc;
+    padding-bottom: 25rpx;
+}
+textarea{
+    margin-top: 20rpx;
+    background: #D2D2D2;
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+    border-radius: 10rpx;
+}

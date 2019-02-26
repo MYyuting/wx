@@ -1,0 +1,62 @@
+<!--pages/personal/datum/datum.wxml-->
+<view class='datum'>
+    <view class='head-top back'></view>
+    <view class='head-box'>
+        <view class='head-img' style='background-image:url({{pathImg}})' bindtap='pathImg'>
+            <image src='/images/camera.png'></image>
+        </view>
+        <view class='head-til'>徐克</view>
+        <view class='autxt {{identityStatus == 0? "autxtActive" : ""}}' >
+            {{identityStatus == 0 ? "已认证" : "未认证"}}
+        </view>
+        <!-- <view class='tab'>导演/编剧/制片</view> -->
+        <view class='company'>美星影视文化有限公司</view>
+        <view class='recharge'>充值成为VIP</view>
+    </view>
+
+    <view class='fill-list'>
+        <view class='authen'>
+            <image src='/images/rne.png' style='width:53rpx;height:38rpx;'></image>
+            <view>
+                <text wx:if="{{identityStatus == 0}}" 
+                style='color:#FF0000;font-size:24rpx;'>已认证</text>
+                <text wx:else style='color:#FF0000;font-size:24rpx;' bindtap='authenClick'>去认证</text>
+                <image src='/images/left.png' style='width:12rpx;height:22rpx;margin-left:15rpx;'></image>
+            </view>
+        </view>
+
+        <view class='authen-con'>
+            <view>
+                <text>熟悉领域</text>
+                <input placeholder="最多15个字符" maxlength="15" bindinput='domain' value='{{domainVal}}'></input>
+            </view>
+            <view>
+                <text>期待认识</text>
+                <input placeholder="最多15个字符" maxlength="15" bindinput='hope' value='{{hopeVal}}'></input>
+            </view>
+            <view>
+                <text>兴趣爱好</text>
+                <input placeholder="最多15个字符" maxlength="15" bindinput='hobby'
+                value='{{hobbyVal}}'></input>
+            </view>
+            <view>
+                <text>来往城市</text>
+                <input placeholder="最多15个字符" maxlength="15" bindinput='city'
+                value='{{cityVal}}'></input>
+            </view>
+            <view>
+                <text>毕业院校</text>
+                <input placeholder="最多15个字符" maxlength="15" bindinput='graduated' value='{{graduatedVal}}'></input>
+            </view>
+            <view>
+                <text>我的家乡</text>
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <input class="picker" placeholder="{{region[0]}}-{{region[1]}}-{{region[2]}}" value='{{regionTxt}}' disabled='true'></input>
+                </picker>
+            </view>
+        </view>
+        <view>
+            <view class='submit back' bindtap='submitEdit'>提交</view>
+        </view>
+    </view>
+</view>

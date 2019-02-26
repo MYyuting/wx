@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "资料认证",
+    "usingComponents": {
+        "com-til": "/compents/title/title"
+    }
+}

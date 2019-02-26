@@ -1,0 +1,9 @@
+<!--pages/chat/chat.wxml-->
+<!-- <text>pages/chat/chat.wxml</text>
+<input type='text' placeholder='内容' bindinput='inputValue'></input>
+<button bindtap='hxloign'>denglv</button>
+<button bindtap='sendMessage'>发送</button> -->
+
+<chat
+	username="{{ username }}"
+	chatType="singleChat"></chat>

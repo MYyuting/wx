@@ -1,0 +1,25 @@
+/* pages/public/serch/serch.wxss */
+
+.serch-input{
+    display: flex;
+    background: #eee;
+    align-items: center;
+    border-radius: 20rpx;
+    justify-content: space-between;
+    padding: 10rpx 15rpx;
+}
+input{
+    width: 60%;
+    flex-grow: 1;
+    padding: 0 10rpx;
+}
+
+.search-list{
+    margin-top: 20rpx;
+    border-top: 1px solid #ccc;
+    padding: 0 30rpx;
+}
+.search-list>view{
+    padding: 15rpx 20rpx;
+    border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,42 @@
+// compents/navbar/navbar.js
+const app = getApp()
+Component({
+    properties: {
+        navbarData: { //navbarData   由父页面传递的数据，变量名字自命名
+            type: Object,
+            value: {},
+            observer: function(newVal, oldVal) {}
+        }
+    },
+    data: {
+        height: '',
+        //默认值  默认显示左上角
+        navbarData: {
+            noticeState: false
+        }
+    },
+    attached: function() {
+        // 获取是否是通过分享进入的小程序
+        // this.setData({
+        //   share: app.globalData.share
+        // })
+        // 定义导航栏的高度   方便对齐
+        this.setData({
+            height: app.globalData.height
+        })
+    },
+    methods: {
+        // 跳转通知
+        _navback() {
+            wx.navigateTo({
+                url: '/pages/public/notice/notice',
+            })
+        },
+        //返回到首页
+        _backhome() {
+            wx.switchTab({
+                url: '/pages/index/index',
+            })
+        }
+    }
+})

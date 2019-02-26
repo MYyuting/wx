@@ -1,0 +1,8 @@
+/* compents/title.wxss */
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 15rpx 20rpx 15rpx;
+    font-size: 30rpx;
+}

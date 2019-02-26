@@ -1,0 +1,74 @@
+/* pages/personal/fellinfo/fellinfo1/fellinfo1.wxss */
+.upImg{
+    margin: 10rpx auto 40rpx;
+    width: 617rpx;
+    height: 390rpx;
+     border-radius: 10rpx;
+     overflow: hidden;
+     background-size: cover;
+}
+image{
+    width: 100%;
+    height: 100%;
+}
+.submit{
+    width: 185rpx;
+    height: 50rpx;
+    border-radius: 30rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin: 80rpx auto;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.alertModel{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, .4)
+}
+.alertModel>view{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.conTxt{
+    position: relative;
+    width: 554rpx;
+    height: 433rpx;
+    border-radius:20rpx;
+    color: #fff; 
+    
+    background: -webkit-linear-gradient(top, #1B32FE,#8C35FC ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom, #1B32FE,#8C35FC); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom, #1B32FE,#8C35FC); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom, #1B32FE,#8C35FC); /* 标准的语法 */
+}
+.con2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+.conTxt .til{
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
+}
+.char{
+    width: 29rpx;
+    height: 29rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+}
+.warn{
+    display: flex;
+    padding: 0 40rpx;
+}
+.info{
+    margin-right: 10rpx;
+}

@@ -1,0 +1,5 @@
+<!--compents/title.wxml-->
+<view class="wrapper">
+    <slot></slot>
+    <slot></slot>
+</view>

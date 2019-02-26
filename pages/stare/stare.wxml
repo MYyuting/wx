@@ -1,0 +1,5 @@
+<!--pages/stare/stare.wxml-->
+<view class='stare'>
+    <image src='/images/qidong.png'></image>
+    <button wx:if="{{btnShow}}" open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>点击授权</button>
+</view>

@@ -1,0 +1,108 @@
+/* pages/connection/invite/invite.wxss */
+
+.invite>button {
+    padding: 25rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0px solid #fff;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    line-height: 0;
+    border-radius: 0px;
+    font-size: 28rpx;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex image {
+    margin-right: 15rpx;
+}
+
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0,.5);
+    overflow: hidden;
+    z-index: 222;
+}
+
+.modal-con {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 223;
+}
+.modal-dialog {
+    width: 540rpx;
+    overflow: hidden;
+    border-radius: 20rpx;
+    color: #fff;
+    background: -webkit-linear-gradient(top, #1b32fe, #8c35fc); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom, #1b32fe, #8c35fc); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom, #1b32fe, #8c35fc); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom, #1b32fe, #8c35fc); /* 标准的语法 */
+}
+
+.modal-title {
+    padding-top: 50rpx;
+    font-size: 33rpx;
+    text-align: center;
+}
+
+.modal-content {
+    padding: 50rpx 32rpx;
+}
+
+.modal-input {
+    display: flex;
+    background: #fff;
+    border-bottom: 2rpx solid #ddd;
+    border-radius: 4rpx;
+    font-size: 28rpx;
+}
+
+.input {
+    width: 100%;
+    height: 73rpx;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    color: #333;
+}
+
+input-holder {
+    color: #666;
+    font-size: 28rpx;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    height: 86rpx;
+    border-top: 1px solid #dedede;
+    font-size: 32rpx;
+    line-height: 86rpx;
+}
+
+.btn-cancel {
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+    width: 50%;
+    color: red;
+    text-align: center;
+}

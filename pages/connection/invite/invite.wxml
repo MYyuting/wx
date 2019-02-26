@@ -1,0 +1,36 @@
+<!--pages/connection/invite/invite.wxml-->
+
+
+<view class='invite'>
+    <button open-type="share" plain="true">
+        <view class='flex'>
+            <image src="/images/weix.png" style='width:50rpx;height:50rpx;'></image>
+            <text>微信好友</text>
+        </view>
+        <image src='/images/left.png' style='width:16rpx;height:24rpx;'></image>
+    </button>
+    <button plain="true" bindtap='phoneClick'>
+        <view class='flex'>
+            <image src="/images/phone.png" style='width:50rpx;height:50rpx;'></image>
+            <text>手机号邀请</text>
+        </view>
+        <image src='/images/left.png' style='width:16rpx;height:24rpx;'></image>
+    </button>
+</view>
+
+<view class="modal-mask" wx:if="{{showModal}}">
+    <view class='modal-con'>
+        <view class="modal-dialog">
+            <view class="modal-title">邀请手机号</view>
+            <view class="modal-content">
+                <view class="modal-input">
+                    <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" placeholder="电话"></input>
+                </view>
+            </view>
+            <view class="modal-footer">
+                <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+            </view>
+        </view>
+    </view>
+</view>

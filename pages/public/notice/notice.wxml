@@ -1,0 +1,18 @@
+<!--pages/public/notice/notice.wxml-->
+<!-- 通知 -->
+<view class='notice'>
+    <view class='notive-list flex' wx:for="{{noticeList}}" wx:key="">
+        <view class='noti-left'>
+            <image src="/images/logo.png" style='width:103rpx;height:103rpx;'></image>
+        </view>
+        <view class='noti-right'>
+            <view class='notiv-til'>
+                美星会官方
+            </view>
+            <view class='txt'>
+                {{item.pushText}}
+            </view>
+            <view class='time'>{{item.createTime}}</view>
+        </view>
+    </view>
+</view> 

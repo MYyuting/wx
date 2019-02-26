@@ -1,0 +1,4 @@
+/* pages/moreStar/moreStar.wxss */
+.act{
+    background: #aaa;
+}

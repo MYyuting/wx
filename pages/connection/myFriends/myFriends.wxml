@@ -1,0 +1,16 @@
+<!--pages/connection/myFriends/myFriends.wxml-->
+<view class='friends'>
+    <view class='zanwu' wx:if="{{member.length == 0}}">暂无添加好友</view>
+    <view class='frien-list ' bindtap='into_chatRoom' wx:for="{{member}}" wx:key="" data-username="{{ item.userId }}" data-userN='{{item.userName}}'>
+        <view class='head-img'>
+            <image class="headimg" src='{{item.userAvatar}}'></image>
+            <image wx:if="{{item.userType == 2}}" class='img' src='/images/vl.png'></image>
+            <image wx:elif="{{item.userType == 0}}" class='img' src='/images/pl.png'></image>
+            <image wx:else class='img' src='/images/rl.png'></image>
+        </view>
+        <view>
+            <view class='til-name'>{{item.userName}}</view>
+            <view class='pation'>导演 制片</view>
+        </view>
+    </view>
+</view>

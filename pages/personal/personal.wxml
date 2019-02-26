@@ -1,0 +1,102 @@
+<!--pages/personal/personal.wxml-->
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='my' style='margin-top:{{height}}px'>
+    <view class='head-con'>
+        <view class='head-left'>
+            <view class='head-img'>
+                <image src='{{personMsg.userAvatar}}'></image>
+                <image wx:if="{{personMsg.userType == 0}}" class='vip' src='/images/pl.png'></image>
+                <image wx:elif="{{personMsg.userType == 1}}" class='vip' src='/images/rl.png'></image>
+                <image wx:else="{{personMsg.userType == 2}}" class='vip' src='/images/vl.png'></image>
+            </view>
+            <view>
+                <view class='head-name'>
+                    <view style='font-size:32rpx'>{{personMsg.userName}}</view>
+                    <image wx:if="{{personMsg.userType==0}}" src='/images/renz1.png' alt="未认证"></image>
+                    <image wx:else src='/images/renz.png' alt="已认证"></image>
+                </view>
+                <view class='head-lable'>
+                     导演、编剧、制片
+                </view>
+            </view>
+        </view>
+        <view class='head-right' bindtap='fellInfo'>
+            <view>完善资料</view>
+            <image src='/images/left.png'></image>
+        </view>
+    </view>
+
+    <view class='money'>
+        <view class='money-l' bindtap='followTap'>
+            <view class='frist'>
+                <image src='/images/guan.png'></image>
+                <text>{{actorNum}}人</text>
+            </view>
+            <view class='btn'>关注的艺人</view>
+        </view>
+        <view class='money-r' bindtap='rechargeClick'>
+            <view class='frist1'>
+                <image src='/images/money.png'></image>
+                <text>{{personMsg.coin}}</text>
+            </view>
+            <view class='btn'>充值</view>
+        </view>
+    </view>
+    <!-- 认证 -->
+    <view wx:if="{{personMsg.userType==0}}" class='Authen margin' bindtap='authentic'>
+        <view class='Authen-l flex'>
+            <image src='/images/ren.png' style='width:73rpx;height:57rpx;margin-right:17rpx'></image>
+            <text>升级身份</text>
+        </view>
+        <view class='Authen-r'>
+            <text style="color:#FF0000;font-size:24rpx">成为认证用户</text>
+            <image  src='/images/left.png' class='riImg'></image>
+        </view>
+    </view>
+    <!-- vip -->
+    <view wx:else class='Authen margin' style='display:none;'>
+        <view class='Authen-l flex'>
+            <image src='/images/ren1.png' style='width:73rpx;height:57rpx;margin-right:17rpx'></image>
+            <text>升级身份</text>
+        </view>
+        <view class='Authen-r'>
+            <text style="color:#FF0000;font-size:24rpx">
+            {{personMsg.userType==1 ?'升级VIP，享用特权' : '您已是VIP用户'}}
+            </text>
+            <image  src='/images/left.png' class='riImg'></image>
+        </view>
+    </view>
+    <view class='list flex margin' wx:for="{{mylist}}" wx:key="index" data-type="{{item.type}}" bindtap='listClick'>
+        <view class='list-l flex'>
+            <image src='{{item.imgurl}}' style='width:55rpx;height:55rpx;margin-right:17rpx'></image>
+            <text>{{item.txt}}</text>
+        </view>
+        <view class='list-r'>
+            <image  src='/images/left.png' class='riImg'></image>
+        </view>
+    </view>
+</view>
+
+<!-- 手机号弹框 -->
+<view class="modal-mask" wx:if="{{phoneShow}}">
+    <view class='modal-con'>
+        <view class="modal-dialog">
+            <view class="modal-title">请绑定手机号</view>
+            <view class="modal-content">
+                <view class="modal-input">
+                    <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="phoneChange" class="input" placeholder="输入手机号"></input>
+                </view>
+                <view class='modal-yzm'>
+                    <input placeholder='验证码' bindinput='codeChange'></input>
+                    <button size='mini' bindtap='sendYzm'>发送</button>
+                </view>
+            </view>
+            <view class="modal-footer">
+                <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+            </view>
+        </view>
+    </view>
+</view>

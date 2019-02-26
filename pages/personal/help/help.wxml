@@ -1,0 +1,49 @@
+<!--pages/personal/help/help.wxml-->
+<view class='help'>
+    <view>
+        <view class='til flex'>
+            <image src='/images/qu.png'></image>
+            <text>美星会介绍</text>
+        </view>
+        <view class='txt'>
+            <view>
+                美星会是面向影视文化行业的一个高端人脉社交平台。在美星会上您可以结识影视行业领袖、导演、制片人、投资方等优质的高端人脉，还可以建立和拓展属于个人的影视艺人资源。您还可以关注心仪的明星，为喜欢的明星加油打call，购买明星签名的纪念品或预约明星录制各类（广告代言、宣传片、年会祝福...)等视频。
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class='til flex'>
+            <image src='/images/qu.png'></image>
+            <text>有关于金币介绍</text>
+        </view>
+        <view class='txt'>
+            <view>
+                美星会金币是由美星会开发并提供的，金币仅能用来兑换美星会直接运营的产品和服务，不能进行转账交易，更不可兑换美星会体系以外的产品和服务，也不能兑换现金和提现。
+                <view>金币可以在美星会小程序上通过充值、购买等方式获得。</view>
+                <view>注：人民币兑换金币的比列为1:1，即1元=1枚</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class='til flex'>
+            <image src='/images/qu.png'></image>
+            <text>认证用户与游客权益介绍</text>
+        </view>
+        <view class='txt'>
+            <view>
+                美星会认证用户与游客，均享有不同的权益：1、游客（享有普通浏览、查看、关注艺人）等功能；2、认证用户（在游客权益基础上，可享有人脉资源，添加好友、发送信息、查看消息...）等。
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class='til flex'>
+            <image src='/images/qu.png'></image>
+            <text>VIP会员用户权益介绍</text>
+        </view>
+        <view class='txt'>
+            <view>
+                美星会VIP用户会员享有基于高标准实名制的影视文化圈高端人脉网络；1、享有不受限制的和其他会员沟通的机会；2、享有担任地方分会等社群内职务的机会；3、有机会参与美星会发起的商业类影视项目；4、有机会获得美星会官方的传播和展示资源；5、享有不定期的会员专项优惠打折活动，后期美星会将推出更多关于VIP的优先权限...
+            </view>
+        </view>
+    </view>
+</view>

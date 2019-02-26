@@ -1,0 +1,7 @@
+<!--pages/connection/groupsChat/groupsChat.wxml-->
+<!-- 群聊天室 -->
+<chat
+	username="{{ username }}"
+	groupId="{{ groupId }}"
+	chatType="chatRoom"></chat>
+<view></view>

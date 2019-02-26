@@ -1,0 +1,34 @@
+<!--pages/connection/newFriends/newFriends.wxml-->
+<view class='newFrien'>
+    <view wx:if="{{friendList.length == 0}}" class='zanwu'>暂无申请数据</view>
+    <view class='new-list flex' wx:for="{{friendList}}" wx:key="index">
+        <view>
+            <view class='name-img'>
+                <image class='headImg' src='{{item.userAvatar}}'></image>
+                <image class='img' style="display:{{item.userType==1? 'block':'none'}}" src='/images/vl.png'></image>
+                <image class='img' style="display:{{item.userType==2? 'block':'none'}}" src='/images/rl.png'></image>
+                <image class='img' style="display:{{item.userType==3? 'block':'none'}}" src='/images/pl.png'></image>
+            </view>
+        </view>
+        <view class='new-r flex'>
+            <view>
+                <view class='til'>{{item.userName}}</view>
+                <view style='color:#999;font-size:24rpx;'>你好，我是333</view>
+            </view>
+            <view class='text'>
+                <view wx:if="{{btnShow}}" style='color:#6E6E6E'>已添加</view>
+                <view wx:else style='color:#FF0000'>加为好友</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<!-- <view class="inform">
+	<text class="defaultText" wx:if="{{ !friendList.length > 0 }}">暂时没有新的通知</text>
+	<view wx:for="{{ friendList }}" wx:key="" class="itemBar">
+		<text class="itemName">{{ item.from }}请求添加你为好友</text>
+		<button data-from="{{ item.from }}" class="rejectBtn" type="warn" size="mini" bindtap="reject">拒绝</button>
+		<button data-from="{{ item.from }}" class="agreeBtn" type="primary" size="mini" bindtap="agree">同意</button>
+	</view>
+</view> -->

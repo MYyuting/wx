@@ -1,0 +1,72 @@
+{
+    "pages": [
+        
+        "pages/personal/personal",
+        "pages/connection/connection",
+        "pages/index/index",
+        "pages/public/search/search",
+        "pages/stare/stare",
+        "pages/public/moreActor/moreActor",
+        
+        "pages/public/datum1/datum1",
+        "pages/personal/datum/datum",
+        "pages/connection/myFriends/myFriends",
+        "pages/personal/fellinfo/fellinfo",
+        "pages/public/notice/notice",
+        "pages/personal/fellinfo/fellinfo1/fellinfo1",
+        "pages/personal/help/help",
+        "pages/news/news",
+        "pages/personal/setting/setting",
+        "pages/connection/newFriends/newFriends",
+        "pages/connection/tribe/tribe",
+        "pages/public/chat/chat",
+        "pages/connection/invite/invite",
+        "pages/logs/logs",
+        "pages/public/moreStar/moreStar",
+        "pages/public/actorDetails/actorDetails",
+        "pages/public/starDetails/starDetails",
+        "pages/public/webview/webview",
+        "pages/personal/recharge/recharge",
+        "pages/connection/groupsChat/groupsChat",
+        "pages/public/consultDetails/consultDetails"
+    ],
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#0077ff",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/home1.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "iconPath": "images/personal.png",
+                "selectedIconPath": "images/personal1.png",
+                "pagePath": "pages/connection/connection",
+                "text": "人脉"
+            },
+            {
+                "iconPath": "images/char.png",
+                "selectedIconPath": "images/char1.png",
+                "pagePath": "pages/news/news",
+                "text": "消息"
+            },
+            {
+                "iconPath": "images/my.png",
+                "selectedIconPath": "images/my1.png",
+                "pagePath": "pages/personal/personal",
+                "text": "个人中心"
+            }
+        ]
+    },
+    "window": {
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "美星会",
+        "navigationBarTextStyle": "black"
+    }
+}

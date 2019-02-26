@@ -1,0 +1,81 @@
+/* pages/personal/fellinfo/fellinfo.wxss */
+
+.header {
+    padding: 20rpx 0 30rpx;
+}
+
+.protrait {
+    margin: auto;
+    border: 1rpx solid #ccc;
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    position: relative;
+}
+
+.protrait .img{
+    width: 50rpx;
+    height: 38rpx;
+    position: absolute;
+    right: 15rpx;
+    bottom: 7rpx;
+}
+.txt {
+    font-size: 30rpx;
+    padding: 20rpx 0 30rpx;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.fellInpt {
+    width: 600rpx;
+    margin: auto;
+}
+.fellist{
+    height: 60rpx;
+    border: 1px solid #1b32fe;
+    border-radius: 30rpx;
+    padding: 0 20rpx;
+    margin-bottom: 30rpx;
+}
+.fellist view{
+    font-size: 24rpx;
+}
+.fellist picker{
+    width: 80%;
+}
+.fellist picker input{
+    width: 100%;
+}
+.fellist input{
+    text-align: center;
+    width: 80%;
+}
+.place{
+    text-align: center;
+}
+
+.upImg{
+    margin: 10rpx auto 40rpx;
+    width: 617rpx;
+    height: 390rpx;
+    background: #ccc;
+    border-radius: 10rpx;
+    overflow: hidden;
+    background-size: cover;
+}
+.upImg image{
+    width: 100%;
+    height: 100%;
+}
+.next{
+    margin: 90rpx auto ;
+    width:185rpx;
+}
+

@@ -1,0 +1,38 @@
+/**app.wxss**/
+page{
+  width: 100%;
+  font-size: 28rpx;
+}
+.bottom-border{
+    padding-bottom: 20rpx;
+}
+
+.actor-title{
+    display: flex;
+    align-items: center;
+}
+.actor-title image{
+    width:20rpx;
+    height:30rpx;
+    margin-right: 10rpx;
+}
+
+.back{
+    background: -webkit-linear-gradient(left, #1B32FE,#8C35FC ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #1B32FE,#8C35FC); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #1B32FE,#8C35FC); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #1B32FE,#8C35FC); /* 标准的语法 */
+}
+
+.zanwu{
+    text-align: center;
+    line-height: 100rpx;
+    color: #999;
+}
+
+
+
+
+
+
+

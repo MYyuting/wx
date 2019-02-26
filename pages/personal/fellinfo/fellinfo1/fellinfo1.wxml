@@ -1,0 +1,45 @@
+<!--pages/personal/fellinfo/fellinfo1/fellinfo1.wxml-->
+<view>
+    <com-til>
+        <view class="actor-title">
+            <image src='/images/ju.png'></image>上传身份证
+        </view>
+    </com-til>
+    <view class='updata'>
+        <view class='upImg' bindtap='fellImg1' style='background-image:url("/images/zu10.png")'>
+            <image src='{{tempFilePaths}}'></image>
+        </view>
+    </view>
+    <view class='warn'>
+        <view class="info">
+            <icon type="info" size="15" color="red"/>
+        </view>
+        <view style='font-size:24rpx;color:#999;line-height:40rpx'>
+            如果您没有营业执照或者名片，点击人工审核，我们将在24h内联系您审核认证。
+            <text style='color:red;' bindtap='rengong'>人工审核</text>
+        </view>
+    </view>
+    <view class='submit back' bindtap='submit'>提交</view>
+</view>
+
+<view class='alertModel' wx:if="{{alertShow}}">
+    <view>
+        <view class='conTxt con2'>
+            <!-- <image src='/images/offer.png' class='char' bindtap='char'></image> -->
+            <view class='con2' wx:if="{{renShow}}">
+                <image src='/images/success.png' style='width:106rpx;height:106rpx;margin-bottom:30rpx;'></image>
+                <view class='til'>认证资料提交成功</view>
+                <view style='font-size:26rpx;'>请等待审核...</view>
+                <image src='/images/back.png' style='width:276rpx;height:50rpx;margin-top:40rpx;' bindtap='backInfo'></image>
+            </view>
+            <!-- 人工 -->
+            <view class="con2" wx:if="{{!renShow}}">
+                <image src='/images/success.png' style='width:106rpx;height:106rpx;margin-bottom:30rpx;'></image>
+                <view class='til'>人工申请提交成功</view>
+                <view style='font-size:26rpx;'>我们将在24h，联系您请等待审核...</view>
+                <image src='/images/back.png' style='width:276rpx;height:50rpx;margin-top:40rpx;' bindtap='backInfo'></image>
+            </view>
+
+        </view>
+    </view>
+</view>

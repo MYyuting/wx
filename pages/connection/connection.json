@@ -1,0 +1,7 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "nav-bar": "/compents/navbar/navbar",
+        "com-til": "/compents/title/title"
+    }
+}

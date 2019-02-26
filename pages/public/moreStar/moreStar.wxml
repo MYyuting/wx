@@ -1,0 +1,4 @@
+<!--pages/moreStar/moreStar.wxml-->
+<view>
+    <view wx:for="{{3}}" data-index="{{index}}" wx:key="index" style='padding=20px;border:1px solid red' bindtap='click1' class="{{index == keyindex ? 'act' : ''}}">明星</view>
+</view>

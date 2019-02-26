@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "艺人简介",
+    "usingComponents": {
+        "com-til": "/compents/title/title"
+    }
+}

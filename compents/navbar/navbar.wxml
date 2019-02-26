@@ -1,0 +1,24 @@
+<!--compents/navbar/navbar.wxml-->
+<!-- <view class='nav-wrap' style='height: {{height*2 + 22}}px;'>
+    <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+    <view style='display: flex; justify-content: space-around;flex-direction: column'>
+        <view class='nav-capsule' style='height: {{height*2 + 44}}px;'>
+            <view bindtap='_navback'>
+                <image src='/images/ling.png' mode='aspectFill' class='back-pre'></image>
+                <view wx:if="{{navbarData.noticeState}}" class='dian' style='top: {{height*2-8}}px;'></view>
+            </view>
+        </view>
+    </view>
+</view> -->
+<view>
+    <view class='nav bg-white' style='height:{{height+46}}px'>
+        <view class='nav-title'>
+            {{navbarData.title}}
+            <!-- <image src='/images/ling.png' mode='aspectFit' class='back' bindtap='navBack'></image> -->
+            <view bindtap='_navback' class='back-pre'>
+                <image src='/images/ling.png' mode='aspectFit' class='back-pre'></image>
+                <view wx:if="{{navbarData.noticeState}}" class='dian'></view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/personal/recharge/recharge.wxml-->
+<!-- 充值 -->
+<view class='recharge'>
+    <view class='til'>金币充值</view>
+    <view class='rechar-con' style="background:url('/images/rechar.png') no-repeat;background-size: cover;">
+        <view class='money1 display'>
+            <image src='/images/jinb.png'></image>
+            <view>余额：3000</view>
+        </view>
+        <view class='display' style='padding-top:50rpx;'>
+            <image src='/images/rechar-t.png' style='width:358rpx;height:48rpx;'></image>
+        </view>
+        <view class='input display' style='padding-top:60rpx;'>
+            <text>输入充值金额</text>
+            <input type='number' placeholder='1元等于1金币' placeholder-class="place" bindinput='money'></input>
+        </view>
+    </view>
+</view>
+<!-- 提示 -->
+<view class='tips display'>
+    <view><icon type="info" size="20" color="red" /></view>
+    <view style='margin-left:10rpx;line-height: 40rpx;'>
+        1元=1美币，累计充值5000元即增加一年的会员时间，10000元即为两年会员时间，依次类推。成为会员后即享受更多特权！如有疑
+    </view>
+</view>
+
+<view class='rechar-btn' bindtap='confirm'>确认充值</view>

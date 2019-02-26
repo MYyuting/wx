@@ -1,0 +1,28 @@
+/* pages/personal/help/help.wxss */
+.til image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+}
+.help{
+    padding-bottom: 50rpx;
+}
+.help .til{
+    padding: 20rpx 30rpx 15rpx;
+    border-bottom: 1px solid #ccc;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.txt{
+    padding: 0 30rpx;
+}
+.txt>view{
+    background: #D2D2D2;
+    border-radius: 10rpx;
+    padding: 15rpx 20rpx;
+    margin: 20rpx 0;
+    font-size: 24rpx;
+    line-height: 1.8;
+}

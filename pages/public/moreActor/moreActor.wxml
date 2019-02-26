@@ -1,0 +1,20 @@
+<!--pages/moreActor/moreActor.wxml-->
+<!-- 艺人list -->
+<view class='content'>
+    <view class="Actorlist" wx:for="{{followList}}" wx:key="index" data-actorId="{{item.actorId}}" bindtap='details'>
+        <image src='{{item.actorHeadUrl}}' mode='aspectFill'></image>
+        <view>
+            <view class='actor-til' style='font-size:30rpx;'>
+                <text>#{{item.actorName}}#</text>
+                <view>
+                    <image hidden='{{!item.isConcern == 0}}' src='/images/xin.png' catchtap='addFollow' data-actorId="{{item.actorId}}"></image>
+                    <image hidden='{{!item.isConcern == 1}}' src='/images/xin1.png' catchtap='calerFollow' data-actorId="{{item.actorId}}"></image>
+                </view>
+            </view>
+            <view class='actor-num'>
+                <text>{{item.actorTitle}}</text>
+                <text>{{item.actorConcern}}</text>
+            </view>
+        </view>
+    </view>
+</view>

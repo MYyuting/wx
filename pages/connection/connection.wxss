@@ -1,0 +1,115 @@
+/* pages/connection/connection.wxss */
+
+.sos{
+    height: 56rpx;
+    background: rgba(220,220,220,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10rpx; 
+}
+.sos image{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+}
+.sos text{
+    color: rgba(138,114,253,1);
+    font-size: 24rpx;
+}
+.margin{
+    padding: 0 30rpx;
+}
+.actor-title{
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+}
+.actor-title image{
+    width:20rpx;
+    height:30rpx;
+    margin-right: 10rpx;
+}
+.per-list,.recom-list{
+    display: flex;
+    padding: 30rpx 20rpx;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+}
+.per-list>view,.recom-l{
+    display: flex;
+    align-items: center;
+}
+.per-l image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 10rpx;
+}
+
+.per-r image{
+    width: 12rpx;
+    height: 22rpx;
+    margin-left: 20rpx;
+}
+.per-r>view{
+    position: relative;
+    font-size: 22rpx;
+    color: #999;
+}
+.dian{
+    position: absolute;
+    background: red;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    right: -10rpx;
+    top: 0
+}
+.recom-l .recom-img{
+    position: relative;
+    width: 100rpx;
+    height: 100rpx;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.headImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.recom-img .img{
+    position: absolute;
+    width:40rpx;
+    height:40rpx;
+    bottom: 0;
+    right: -6rpx;
+}
+.com-name{
+    margin-bottom: 4rpx;
+    font-size: 30rpx;
+}
+.com-label{
+    font-size: 24rpx;
+    color: #6E6E6E;
+}
+.recom-r{
+    width: 20%;
+}
+.recom-r>view{
+    width: 130rpx;
+    height: 50rpx;
+    background: -webkit-linear-gradient(left, #1B32FE,#8C35FC); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #1B32FE,#8C35FC ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right , #1B32FE, #8C35FC); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #1B32FE,#8C35FC); /* 标准的语法 */
+    text-align: center;
+    color: #fff;
+    line-height: 50rpx;
+    border-radius: 25rpx;
+    font-size: 24rpx;
+}
+.recom-r .activeBtn{
+    background: #909090;
+}

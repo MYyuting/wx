@@ -1,0 +1,173 @@
+/**index.wxss**/
+.banner-box{
+    height: 380rpx;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-img{
+    display: block;
+    height: 400rpx;
+    position: relative;
+}
+.banner-img image{
+  width: 96%;
+  display: block;
+  margin: 0 auto;
+  height: 350rpx;
+  margin-top:20rpx;
+  border-radius:15rpx;
+  box-shadow: 0px 5px 10px #aaa;
+}
+.banner-img .active{
+  margin-top:0rpx;
+  height: 380rpx;
+}
+.sos{
+    height: 56rpx;
+    background: rgba(220,220,220,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10rpx; 
+}
+.sos image{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+}
+.sos text{
+    color: rgba(138,114,253,1);
+    font-size: 24rpx;
+}
+/* 艺人展 */
+.actor-title,.more{
+    display: flex;
+    align-items: center;
+}
+.more{
+    color: rgba(108,107,107,1);
+    font-size: 24rpx;
+}
+.more image{
+    width: 15rpx;
+    height: 22rpx;
+    margin-left: 10rpx;
+}
+.actor-title image{
+    width:20rpx;
+    height:30rpx;
+    margin-right: 10rpx;
+}
+.scroll-view_H{
+    white-space:nowrap;
+    /* padding-right: 15rpx; */
+    width: 100%;
+    margin-bottom:10rpx;
+    box-sizing: border-box;
+}
+.scroll-view-item_H{
+    box-shadow: 1px 2px 5px #ccc;
+    height: 286rpx;
+    width: 270rpx;
+    border-radius: 6px;
+    margin-left: 12rpx;
+    display: inline-block;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.scroll-view-item_H>view{
+    padding: 0 15rpx 8rpx;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, .3)
+}
+.actor-til{
+    font-size: 30rpx;
+    color: #fff;
+}
+.actor-num{
+    font-size: 24rpx;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.actor-list{
+    background-size:cover;
+    background-position:50% 50%;
+}
+
+.scroll-view-item_Y{
+    width: 250rpx;
+    margin-left: 15rpx;
+    margin-right: 5rpx;
+    display: inline-block;
+}
+.Image{
+    border-radius: 8rpx;
+    overflow: hidden;
+    margin-right: 5rpx;
+    box-shadow: 1px 3px 5px #ccc;
+}
+.Image,.Image image{
+    height: 170rpx;
+    width: 250rpx;
+}
+.til-y{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    font-size: 26rpx;
+    line-height: 60rpx;
+}
+.buy{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    color: #8C35FC;
+}
+.buy .buybtn{
+    padding: 0 20rpx;
+    color: #fff;
+    font-size: 20rpx;
+    background: -webkit-linear-gradient(left, #8C35FC , #1B32FE); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #8C35FC, #1B32FE); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #8C35FC, #1B32FE); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #8C35FC , #1B32FE); /* 标准的语法 */
+    border-radius: 20rpx;
+}
+.consult{
+    display: flex;
+    padding: 30rpx 15rpx;
+    border: 1px solid #ccc;
+}
+.consult-left{
+    width: 70%;
+}
+.consult-left text{
+    color:#999;
+    font-size: 26rpx;
+}
+.consult-til{
+    display: -webkit-box;
+    height: 90rpx;
+    line-height: 42rpx;
+    margin-bottom: 22rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+.consult-right{
+    width: 218rpx;
+    margin-left: 30rpx;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.consult-right image{
+    width: 100%;
+    height: 100%;
+}
